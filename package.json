@@ -1,7 +1,7 @@
 {
   "name": "phygrid-template-edge",
-  "version": "0.1.0",
-  "description": "IoT App",
+  "version": "1.0.0",
+  "description": "Phygrid Edge App Template",
   "application-type": "iot",
   "container-registry": "omborigridregistry.azurecr.io",
   "license": "MIT",
@@ -14,8 +14,7 @@
     "extends": "react-app"
   },
   "dependencies": {
-    "@ombori/ga-module": "^3.20.2",
-    "@phygrid/cli": "^2.0.74"
+    "@phygrid/hub-client": "2.0.66"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
