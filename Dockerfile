@@ -7,8 +7,12 @@ WORKDIR /app/
 
 COPY --from=pre-build package*.json ./
 
-RUN yarn install
+# Install Python and build dependencies
+RUN apk add --no-cache python3 make g++
 
 COPY dist ./
+COPY package.json ./
+COPY yarn.lock ./
+RUN yarn install
 
 CMD ["node", "app.js"]
