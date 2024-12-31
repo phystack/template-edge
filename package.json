@@ -1,0 +1,33 @@
+{
+  "name": "phygrid-template-edge",
+  "version": "0.1.0",
+  "description": "IoT App",
+  "application-type": "iot",
+  "container-registry": "omborigridregistry.azurecr.io",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0 <19.0.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "dependencies": {
+    "@ombori/ga-module": "^3.20.2",
+    "@phygrid/cli": "^2.0.71"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@ombori/ts-schema": "^2.92.0",
+    "typescript": "^4.9.5"
+  },
+  "scripts": {
+    "bootstrap": "echo init ok",
+    "schema": "mkdir -p build && npx ts-schema src/schema.ts build/",
+    "build": "mkdir -p build && tsc && yarn schema && touch build/index.html && phy app build",
+    "desc": "phy app upload-description",
+    "pub": "phy app publish",
+    "deploy": "phy module deploy"
+  }
+}
