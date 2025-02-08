@@ -7,8 +7,16 @@ WORKDIR /app/
 
 COPY --from=pre-build package*.json ./
 
-# Install Python and build dependencies
-RUN apk add --no-cache python3 make g++
+# Install Python and build dependencies for node-gyp
+RUN apk add --no-cache \
+    python3 \
+    make \
+    g++ \
+    py3-pip \
+    build-base \
+    gcc \
+    libc-dev \
+    linux-headers
 
 COPY dist ./
 COPY package.json ./
