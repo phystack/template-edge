@@ -1,22 +1,22 @@
-FROM node:20-alpine AS pre-build
+FROM node:20-slim AS pre-build
 COPY package*.json ./
 
-FROM node:20-alpine
+FROM node:20-slim
 
 WORKDIR /app/
 
 COPY --from=pre-build package*.json ./
 
 # Install Python and build dependencies for node-gyp
-RUN apk add --no-cache \
+RUN apt-get update && apt-get install -y \
     python3 \
     make \
     g++ \
-    py3-pip \
-    build-base \
+    python3-pip \
+    build-essential \
     gcc \
     libc-dev \
-    linux-headers
+    && rm -rf /var/lib/apt/lists/*
 
 COPY dist ./
 COPY package.json ./
