@@ -29,6 +29,6 @@
     "build": "mkdir -p build && tsc && yarn schema && touch build/index.html && phy app build",
     "desc": "phy app upload-description",
     "pub": "phy app publish",
-    "deploy": "phy module deploy"
+    "deploy": "phy app deploy"
   }
 }
