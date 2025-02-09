@@ -23,6 +23,7 @@
     "typescript": "^4.9.5"
   },
   "scripts": {
+    "devbuild": "tsc",
     "bootstrap": "echo init ok",
     "schema": "mkdir -p build && npx ts-schema src/schema.ts build/",
     "build": "mkdir -p build && tsc && yarn schema && touch build/index.html && phy app build",
