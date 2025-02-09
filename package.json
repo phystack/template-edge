@@ -14,7 +14,7 @@
     "extends": "react-app"
   },
   "dependencies": {
-    "@phygrid/cli": "^4.0.69",
+    "@phygrid/cli": "^4.0.75",
     "@phygrid/hub-client": "2.0.66"
   },
   "devDependencies": {
