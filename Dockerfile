@@ -1,11 +1,6 @@
-FROM node:20-slim AS pre-build
-COPY package*.json ./
-
 FROM node:20-slim
 
 WORKDIR /app/
-
-COPY --from=pre-build package*.json ./
 
 # Install Python and build dependencies for node-gyp
 RUN apt-get update && apt-get install -y \
