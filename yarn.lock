@@ -21,10 +21,10 @@
   dependencies:
     ts-json-schema-generator "^0.93.0"
 
-"@phygrid/cli@^4.0.97":
-  version "4.0.97"
-  resolved "https://registry.yarnpkg.com/@phygrid/cli/-/cli-4.0.97.tgz#7daaa88654df65ae4a5bc878c7182b8f357cba46"
-  integrity sha512-PKKBjEBWbBMxjQyYJmkLuDVZbYGuZHlgbp0X1oa44ESIbJ5K1OWq35cNvw0N5c6+Sf04+71OMo3m8cymjqArzg==
+"@phygrid/cli@^4.0.98":
+  version "4.0.98"
+  resolved "https://registry.yarnpkg.com/@phygrid/cli/-/cli-4.0.98.tgz#caac22df76a6bf841009cd63e7a2811d2024b4f5"
+  integrity sha512-kxbmRHR74nagRhdwTs/t/Tg3aEyZA6JY2hDVMbNtYNELHPcXFiE/dab3CVdzMz+YpId+weWq/kdUi0/WrKu5Nw==
   dependencies:
     "@types/cheerio" "^0.22.35"
     "@types/mkdirp" "^1.0.0"
