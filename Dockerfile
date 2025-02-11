@@ -16,6 +16,6 @@ RUN apt-get update && apt-get install -y \
 COPY dist ./
 COPY package.json ./
 COPY yarn.lock ./
-RUN yarn install
+RUN yarn install --production
 
 CMD ["node", "app.js"]

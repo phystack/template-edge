@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@ombori/ts-schema": "^2.92.0",
-    "@phygrid/cli": "^4.0.98",
+    "@phygrid/cli": "^4.0.99",
     "@types/node": "^18.11.18",
     "typescript": "^4.9.5"
   },
