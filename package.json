@@ -2,7 +2,7 @@
   "name": "phygrid-template-edge",
   "version": "1.0.0",
   "description": "Phygrid Edge App Template",
-  "application-type": "iot",
+  "application-type": "module",
   "container-registry": "omborigridregistry.azurecr.io",
   "license": "MIT",
   "type": "module",
