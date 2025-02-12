@@ -21,10 +21,10 @@
   dependencies:
     ts-json-schema-generator "^0.93.0"
 
-"@phygrid/cli@^4.0.99":
-  version "4.0.99"
-  resolved "https://registry.yarnpkg.com/@phygrid/cli/-/cli-4.0.99.tgz#2d959577ef165a95afa31fbaf1e21d7266627353"
-  integrity sha512-HqiF5Nqaemct9fEyy3PSMRjF2IKD/idKvjrH33wFptMs4qt7Q30PWX7Ya3SkkFJfn2Ps6c8GLCbQQMV08q0Tdw==
+"@phygrid/cli@^4.0.106":
+  version "4.0.106"
+  resolved "https://registry.yarnpkg.com/@phygrid/cli/-/cli-4.0.106.tgz#8a8ba83ab478502725bd9f565852dcc06618a834"
+  integrity sha512-Fz8pOI2J1KFyF85xEGcPmuqIHingSgSrb9iPuL48fy9YWEZgu+DR+QkMFhguigfkT5RKFTXfFGe7rj/fBb7mDA==
   dependencies:
     "@types/cheerio" "^0.22.35"
     "@types/mkdirp" "^1.0.0"
@@ -59,21 +59,27 @@
     websocket-stream "^5.5.2"
     ws "^7.4.5"
 
-"@phygrid/hub-client@2.0.66":
-  version "2.0.66"
-  resolved "https://registry.yarnpkg.com/@phygrid/hub-client/-/hub-client-2.0.66.tgz#e63efb517264e570013d8ba493a3b8fcda53f821"
-  integrity sha512-CbYEDIulQLRubBUIONn/Yu1pI7CuG9IgOuLJljHrhDFtPBcOiSsbtArB6VWLR6F5ZzWJt3i6zPD16N4APpH2GA==
+"@phygrid/hub-client@^4.0.106":
+  version "4.0.106"
+  resolved "https://registry.yarnpkg.com/@phygrid/hub-client/-/hub-client-4.0.106.tgz#f97891ed53689746d0232087c0c08dcdb8584504"
+  integrity sha512-98HfZlGXqByLrCCwnOmrgoxmERL45AsPNixqpWAzGWvgOnFE2p8I58pQyqH5m6ojdFsXEtT5rc7HfTXxiOIZSw==
   dependencies:
-    "@phygrid/phy-logger" "2.0.66"
+    "@phygrid/phy-logger" "4.0.106"
+    axios "^1.7.9"
     bufferutil "^4.0.8"
+    https-proxy-agent "^7.0.6"
     lodash "^4.17.21"
+    lodash.isnil "^4.0.0"
+    lodash.omitby "^4.6.0"
+    lodash.once "^4.1.1"
     socket.io-client "^4.7.5"
     utf-8-validate "^6.0.4"
+    uuid "^11.0.5"
 
-"@phygrid/phy-logger@2.0.66":
-  version "2.0.66"
-  resolved "https://registry.yarnpkg.com/@phygrid/phy-logger/-/phy-logger-2.0.66.tgz#7ce53996e634588d9f4eed4d1aeaac292e22f355"
-  integrity sha512-y/c1PulE3cug/CIfpNjKslwy2sRp+GAmw93zskEST1Gj/u4YfJ12zOghordJd38Fx8qX8GybZEtoXb2QCht54A==
+"@phygrid/phy-logger@4.0.106":
+  version "4.0.106"
+  resolved "https://registry.yarnpkg.com/@phygrid/phy-logger/-/phy-logger-4.0.106.tgz#6a383db3c5c5a536976238b26f0ee7d908f16ff0"
+  integrity sha512-zAzrbfxMBaWX5E+XlE/9OLhy1zod0lWLzSyhExmHZK/PPutrI2v/Y+wAlPe/S0OcLoF8150mLGvagXQ9IDmv+A==
 
 "@socket.io/component-emitter@~3.1.0":
   version "3.1.2"
@@ -937,7 +943,7 @@ http-signature@~1.2.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
-https-proxy-agent@^7.0.4:
+https-proxy-agent@^7.0.4, https-proxy-agent@^7.0.6:
   version "7.0.6"
   resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-7.0.6.tgz#da8dfeac7da130b05c2ba4b59c9b6cd66611a6b9"
   integrity sha512-vK9P5/iUfdl95AI+JVyUuIcVtd4ofvtrOr3HNtM2yxC9bnMbEdp3x01OhQNnjb8IJYi38VlTE3mBXwcfvywuSw==
@@ -1146,6 +1152,21 @@ jsprim@^1.2.2:
     extsprintf "1.3.0"
     json-schema "0.4.0"
     verror "1.10.0"
+
+lodash.isnil@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/lodash.isnil/-/lodash.isnil-4.0.0.tgz#49e28cd559013458c814c5479d3c663a21bfaa6c"
+  integrity sha512-up2Mzq3545mwVnMhTDMdfoG1OurpA/s5t88JmQX809eH3C8491iu2sfKhTfhQtKY78oPNhiaHJUpT/dUDAAtng==
+
+lodash.omitby@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/lodash.omitby/-/lodash.omitby-4.6.0.tgz#5c15ff4754ad555016b53c041311e8f079204791"
+  integrity sha512-5OrRcIVR75M288p4nbI2WLAf3ndw2GD9fyNv3Bc15+WCxJDdZ4lYndSxGd7hnG6PVjiJTeJE2dHEGhIuKGicIQ==
+
+lodash.once@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.once/-/lodash.once-4.1.1.tgz#0dd3971213c7c56df880977d504c88fb471a97ac"
+  integrity sha512-Sb487aTOCr9drQVL8pIxOzVhafOjZN9UU54hiN8PU3uAiSV7lx1yYNpbNmex2PK6dSJoNTSJUUswT651yww3Mg==
 
 lodash@^4.17.15, lodash@^4.17.21:
   version "4.17.21"
