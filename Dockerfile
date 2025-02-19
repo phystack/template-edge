@@ -13,9 +13,9 @@ RUN apt-get update && apt-get install -y \
     libc-dev \
     && rm -rf /var/lib/apt/lists/*
 
-COPY dist ./
 COPY package.json ./
 COPY yarn.lock ./
 RUN yarn install --production
+COPY dist ./
 
 CMD ["node", "app.js"]

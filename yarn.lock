@@ -14,10 +14,10 @@
     wrap-ansi "^8.1.0"
     wrap-ansi-cjs "npm:wrap-ansi@^7.0.0"
 
-"@phygrid/cli@^4.2.66":
-  version "4.2.66"
-  resolved "https://registry.yarnpkg.com/@phygrid/cli/-/cli-4.2.66.tgz#9c0faf4e6e326f8684d5f8b097808016576cebc6"
-  integrity sha512-8pD3tkU+y928mWeQpoa7yA2p66BvYA6sFjpSm2w5pOp1G4FVNWas8eq/RJayaDVgE4ZLiHFAUu5pkkh75chA7A==
+"@phygrid/cli@^4.2.69":
+  version "4.2.69"
+  resolved "https://registry.yarnpkg.com/@phygrid/cli/-/cli-4.2.69.tgz#bb06f0082c46e666948053da3776f1532dbbf830"
+  integrity sha512-jQ/tQFtcwty+KufU+cLICINnxhAfhWrjQBq1CPqH9nCaOhqg5phY7T7c0iXy4ypsBpsLCbPvTDRRkYE0bHNX8w==
   dependencies:
     "@types/cheerio" "^0.22.35"
     "@types/mkdirp" "^1.0.0"
@@ -52,12 +52,12 @@
     websocket-stream "^5.5.2"
     ws "^7.4.5"
 
-"@phygrid/hub-client@^4.2.66":
-  version "4.2.66"
-  resolved "https://registry.yarnpkg.com/@phygrid/hub-client/-/hub-client-4.2.66.tgz#b6a0edd4501f066fd3e52ddf25d38e560b56a90d"
-  integrity sha512-ee9crqcqzIgaNJp+UbBfCuXLyI9gmZxveUJAoABjK9WaSop7QDT8pkoY/FXcvBNDfYeHS/Y55PNjwhYepepYYQ==
+"@phygrid/hub-client@^4.2.69":
+  version "4.2.69"
+  resolved "https://registry.yarnpkg.com/@phygrid/hub-client/-/hub-client-4.2.69.tgz#c51b67e23c85fd91ce78ddc601a6bbdf5f30014b"
+  integrity sha512-R1EyI9acLZ4kL2trhJOH73E2yaOLhDiKilrXJG6z5ARmBMYPRT3bl68g7ROkep2W+H9k+oH69pKKZ1lpsT3nlg==
   dependencies:
-    "@phygrid/phy-logger" "4.2.66"
+    "@phygrid/phy-logger" "4.2.69"
     axios "^1.7.9"
     bufferutil "^4.0.8"
     https-proxy-agent "^7.0.6"
@@ -71,10 +71,10 @@
   optionalDependencies:
     wrtc "^0.4.7"
 
-"@phygrid/phy-logger@4.2.66":
-  version "4.2.66"
-  resolved "https://registry.yarnpkg.com/@phygrid/phy-logger/-/phy-logger-4.2.66.tgz#4834d182afa66c1f09df95cc030940901c377943"
-  integrity sha512-pGBJWQvCYUzrs0VE7PgAKl8agszXzSl/m3fqBEXC8rFy1EjijGirlOCjaphQurIslIg2NrzfDmuuwAQS8EYtDw==
+"@phygrid/phy-logger@4.2.69":
+  version "4.2.69"
+  resolved "https://registry.yarnpkg.com/@phygrid/phy-logger/-/phy-logger-4.2.69.tgz#4a62e6f6171be4e928d3a762e54fbfcc0217b69a"
+  integrity sha512-TkC/T2nivF6MIsabJpn2OKysJXVR6PTHVPM2mtGPKMpF9asnENrDFw7Uhz6AgoIXMLEDdoCyBJZEBxjn1eEJTQ==
 
 "@phygrid/ts-schema@^4.2.66":
   version "4.2.66"

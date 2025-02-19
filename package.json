@@ -14,10 +14,10 @@
     "extends": "react-app"
   },
   "dependencies": {
-    "@phygrid/hub-client": "^4.2.66"
+    "@phygrid/hub-client": "^4.2.69"
   },
   "devDependencies": {
-    "@phygrid/cli": "^4.2.66",
+    "@phygrid/cli": "^4.2.69",
     "@phygrid/ts-schema": "^4.2.66",
     "@types/node": "^18.11.18",
     "typescript": "^4.9.5"
