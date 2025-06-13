@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@colors/colors@1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@colors/colors/-/colors-1.5.0.tgz#bb504579c1cae923e6576a4f5da43d25f97bdbd9"
+  integrity sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==
+
 "@isaacs/cliui@^8.0.2":
   version "8.0.2"
   resolved "https://registry.yarnpkg.com/@isaacs/cliui/-/cliui-8.0.2.tgz#b37667b7bc181c168782259bab42474fbf52b550"
@@ -39,10 +44,10 @@
   dependencies:
     semver "^7.3.5"
 
-"@phygrid/cli@^4.2.381":
-  version "4.2.381"
-  resolved "https://registry.yarnpkg.com/@phygrid/cli/-/cli-4.2.381.tgz#5f675d7299d8ffa9f40bb0ddbbd8deac0c12a167"
-  integrity sha512-Ifz/9tcH1YH19qaIpDlu2AmhpePiAPWw1mY6cc75oRlXVgWg6Cqf9OJaSfms2oymVmGQyImpcvQHqU2lL7OPUw==
+"@phygrid/cli@^4.4.6":
+  version "4.4.6"
+  resolved "https://registry.yarnpkg.com/@phygrid/cli/-/cli-4.4.6.tgz#c053fcb7385e1d7e1f80a30a3801d242e271e9bb"
+  integrity sha512-r0euKoGnsBgW8NgvfiLeBZxotWrc2zs8WBfVeDfnc9/NzySN1Jh1kArbcDfKSdnEvhbB9s5mThfbk8VgoGwZPg==
   dependencies:
     "@types/cheerio" "^0.22.35"
     "@types/mkdirp" "^1.0.0"
@@ -53,6 +58,7 @@
     boxen "^4.2.0"
     chalk "^3.0.0"
     cheerio "^1.0.0-rc.12"
+    cli-table3 "^0.6.3"
     clui "^0.3.6"
     commander "^5.0.0"
     cross-spawn "^7.0.3"
@@ -78,12 +84,12 @@
     websocket-stream "^5.5.2"
     ws "^7.4.5"
 
-"@phygrid/hub-client@^4.2.381":
-  version "4.2.381"
-  resolved "https://registry.yarnpkg.com/@phygrid/hub-client/-/hub-client-4.2.381.tgz#db47c34085434942a4f64a381a041b97a1737596"
-  integrity sha512-pB+ui4OcVdSkUyyRByBA8hq/sEG/tEPn4WzMSrE43SEMwN4PXvin7gsorfL8PjadFo+k5muzZjK91hV71e5E/w==
+"@phygrid/hub-client@^4.4.6":
+  version "4.4.6"
+  resolved "https://registry.yarnpkg.com/@phygrid/hub-client/-/hub-client-4.4.6.tgz#94efccc7f83d2ba8792e7af348381bee1e02b5de"
+  integrity sha512-7J9DUOrUYHQbNDdPKWQE8BYVpKKGQmm6B6rmkgagN8jrxDTLd6s8uPnehTx8WvahMJD4h/CGO4SyWL10H136jQ==
   dependencies:
-    "@phygrid/socket.io-proxy" "4.2.381"
+    "@phygrid/socket.io-proxy" "4.4.6"
     "@roamhq/wrtc" "^0.8.0"
     axios "^1.7.9"
     bufferutil "^4.0.9"
@@ -100,10 +106,10 @@
     node-gyp "^11.1.0"
     node-pre-gyp "^0.17.0"
 
-"@phygrid/socket.io-proxy@4.2.381":
-  version "4.2.381"
-  resolved "https://registry.yarnpkg.com/@phygrid/socket.io-proxy/-/socket.io-proxy-4.2.381.tgz#d5b5c7b5dd9f086dedaa5ce8d3e5c1405bf95d4f"
-  integrity sha512-0HgoVMJ6eDG+c96S83kgZ2b13rCdnQYf/Qpn72ie4eu/xSTrjFiWm+y4vlNxYE3wVRcTNnzokbvkiMZWU7IqHw==
+"@phygrid/socket.io-proxy@4.4.6":
+  version "4.4.6"
+  resolved "https://registry.yarnpkg.com/@phygrid/socket.io-proxy/-/socket.io-proxy-4.4.6.tgz#362a9a31298dc817fc77d3e686f3a34084e9a9c3"
+  integrity sha512-Ds/yq3wEpadaqISjf+2bgJI0ThqwxXnk1gQeQmTP+NJF9EMxC8ZRyJezWGizflr/Cka3wkY2hbiQZLL24UGwGQ==
   dependencies:
     axios "^1.7.9"
     bufferutil "^4.0.9"
@@ -113,10 +119,10 @@
     http-proxy-agent "^7.0.2"
     https-proxy-agent "^7.0.6"
 
-"@phygrid/ts-schema@^4.2.165":
-  version "4.2.165"
-  resolved "https://registry.yarnpkg.com/@phygrid/ts-schema/-/ts-schema-4.2.165.tgz#42657a196f6b0739da5743143ca4fa94c34e1cca"
-  integrity sha512-M4K8Qdz8olHlemtb7SN7c1Z6xSebAuu1XdQ7Cn/HoVcph+3yY4FmZL4vFU/O6Iu3h4PBic6zaE9VevySoOnOXQ==
+"@phygrid/ts-schema@^4.4.6":
+  version "4.4.6"
+  resolved "https://registry.yarnpkg.com/@phygrid/ts-schema/-/ts-schema-4.4.6.tgz#88f5236244d656a43dd21fe48c020075c8ccd674"
+  integrity sha512-o+RW/aqqbSgwFEpun9gfMqT7UyB4+3Ub9KE7z6f5rK7mjGfWDZzofpVD7PUDXZZ7P02/t5q1P9mJTHSEJa1xbg==
   dependencies:
     ts-json-schema-generator "^2.3.0"
 
@@ -191,12 +197,12 @@
   resolved "https://registry.npmjs.org/@types/node/-/node-14.14.36.tgz"
   integrity sha512-kjivUwDJfIjngzbhooRnOLhGYz6oRFi+L+EpMjxroDYXwDw9lHrJJ43E+dJ6KAd3V3WxWAJ/qZE9XKYHhjPOFQ==
 
-"@types/node@^18.11.18":
-  version "18.19.68"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.19.68.tgz#f4f10d9927a7eaf3568c46a6d739cc0967ccb701"
-  integrity sha512-QGtpFH1vB99ZmTa63K4/FU8twThj4fuVSBkGddTp7uIL/cuoLWIUSL2RcOaigBhfR+hg5pgGkBnkoOxrTVBMKw==
+"@types/node@^20.19.0":
+  version "20.19.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.19.0.tgz#7006b097b15dfea06695c3bbdba98b268797f65b"
+  integrity sha512-hfrc+1tud1xcdVTABC2JiomZJEklMcXYNTVtZLAeqTVWD+qL5jkHKT+1lOtqDdGxt+mB53DTtiz673vfjU8D1Q==
   dependencies:
-    undici-types "~5.26.4"
+    undici-types "~6.21.0"
 
 abbrev@1:
   version "1.1.1"
@@ -540,6 +546,15 @@ cli-spinners@^2.5.0:
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/cli-spinners/-/cli-spinners-2.9.2.tgz#1773a8f4b9c4d6ac31563df53b3fc1d79462fe41"
   integrity sha512-ywqV+5MmyL4E7ybXgKys4DugZbX0FC6LnwrhjuykIjnK9k8OQacQ7axGKnjDXWNhns0xot3bZI5h55H8yo9cJg==
+
+cli-table3@^0.6.3:
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/cli-table3/-/cli-table3-0.6.5.tgz#013b91351762739c16a9567c21a04632e449bf2f"
+  integrity sha512-+W/5efTR7y5HRD7gACw9yQjqMVvEMLBHmboM/kPWam+H+Hmyrgjh6YncVKK122YZkXrLudzTuAukUw9FnMf7IQ==
+  dependencies:
+    string-width "^4.2.0"
+  optionalDependencies:
+    "@colors/colors" "1.5.0"
 
 cli-width@^3.0.0:
   version "3.0.0"
@@ -2327,7 +2342,7 @@ string-width@^1.0.1:
     is-fullwidth-code-point "^1.0.0"
     strip-ansi "^3.0.0"
 
-"string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.0.0, string-width@^4.1.0:
+"string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.0.0, string-width@^4.1.0, string-width@^4.2.0:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -2535,10 +2550,10 @@ underscore@^1.12.1:
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.13.7.tgz#970e33963af9a7dda228f17ebe8399e5fbe63a10"
   integrity sha512-GMXzWtsc57XAtguZgaQViUOzs0KTkk8ojr3/xAxXLITqf/3EMwxC0inyETfDFjH/Krbhuep0HNbbjI9i/q3F3g==
 
-undici-types@~5.26.4:
-  version "5.26.5"
-  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-5.26.5.tgz#bcd539893d00b56e964fd2657a4866b221a65617"
-  integrity sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==
+undici-types@~6.21.0:
+  version "6.21.0"
+  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-6.21.0.tgz#691d00af3909be93a7faa13be61b3a5b50ef12cb"
+  integrity sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==
 
 undici@^6.19.5:
   version "6.21.0"
