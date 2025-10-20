@@ -1,4 +1,4 @@
-import { PhyHubClient, connectPhyClient } from '@phygrid/hub-client';
+import { PhyHubClient, connectPhyClient } from '@phystack/hub-client';
 import { Settings } from './schema';
 
 const client: PhyHubClient = await connectPhyClient();
