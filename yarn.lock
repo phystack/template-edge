@@ -44,10 +44,10 @@
   dependencies:
     semver "^7.3.5"
 
-"@phystack/cli@^4.4.37":
-  version "4.4.37"
-  resolved "https://registry.yarnpkg.com/@phystack/cli/-/cli-4.4.37.tgz#3b6c853507599e869f3c4ec6685018326a4b3c59"
-  integrity sha512-Yg2yhnVEvo1uEOVGLA0+A1PFQQlM5qyxLVllYCGR2/CrvgaYtNwwWC+KR8kiTVYmSen6QHxL31WWGBUR1ghlqw==
+"@phystack/cli@^4.4.38":
+  version "4.4.38"
+  resolved "https://registry.yarnpkg.com/@phystack/cli/-/cli-4.4.38.tgz#3fc612933b23c09ecbb495e793608268b53c970a"
+  integrity sha512-vdHwILlW0cLPD4EnqFQqDCN58TkuPzDJHuAFoF3et0YW0s3og8BBy42mRrbuuOADXBz/sUEqCSSKVTTL9Q8+KQ==
   dependencies:
     "@types/cheerio" "^0.22.35"
     "@types/mkdirp" "^1.0.0"
@@ -84,12 +84,12 @@
     websocket-stream "^5.5.2"
     ws "^7.4.5"
 
-"@phystack/hub-client@^4.4.37":
-  version "4.4.37"
-  resolved "https://registry.yarnpkg.com/@phystack/hub-client/-/hub-client-4.4.37.tgz#d627c69be4d1fd33970d2f127ec13e9779c6cb9d"
-  integrity sha512-k0Byz1Xda5A1TQOxOMbYsn98AXZw54OhzxQv6c43j1GVwErp9UT/BvQzyD8I22JcVdZFI1nKjgVu0mokdOkikw==
+"@phystack/hub-client@^4.4.38":
+  version "4.4.38"
+  resolved "https://registry.yarnpkg.com/@phystack/hub-client/-/hub-client-4.4.38.tgz#1b9459fefc75730dfa32301a3febea9e34d49d53"
+  integrity sha512-0oc+xEMQnJNJGUthko1h9zH8krthB4xCOGM6YIJ/E23hmj30CkO836N0vh/A14uS8GvFJPXeyJmzbxSw/hjK9Q==
   dependencies:
-    "@phystack/socket.io-proxy" "4.4.37"
+    "@phystack/socket.io-proxy" "4.4.38"
     "@roamhq/wrtc" "^0.8.0"
     axios "^1.7.9"
     bufferutil "^4.0.9"
@@ -106,10 +106,10 @@
     node-gyp "^11.1.0"
     node-pre-gyp "^0.17.0"
 
-"@phystack/socket.io-proxy@4.4.37":
-  version "4.4.37"
-  resolved "https://registry.yarnpkg.com/@phystack/socket.io-proxy/-/socket.io-proxy-4.4.37.tgz#4b2c488d004588a27b34f2dc873a7172ad4637ee"
-  integrity sha512-pt4l6GGfVLP2hHOsILxCUSBXrC39KrDFoyvbnLbun8u7qxoarbdNaBmSU1DkIBWJKGnRzK9IXZ69XbbIH4NerA==
+"@phystack/socket.io-proxy@4.4.38":
+  version "4.4.38"
+  resolved "https://registry.yarnpkg.com/@phystack/socket.io-proxy/-/socket.io-proxy-4.4.38.tgz#0d891f85477ed1c92f2918f08c05993f8b14a1b0"
+  integrity sha512-WswTpbopTY0qqq6Ydi89t8/gT0t5TaLq/JvEHfLN/QPc1dla/KJ3iDp1LI497sVow8fUojouHWFeO5TDKcRrbg==
   dependencies:
     axios "^1.7.9"
     bufferutil "^4.0.9"
@@ -119,10 +119,10 @@
     http-proxy-agent "^7.0.2"
     https-proxy-agent "^7.0.6"
 
-"@phystack/ts-schema@^4.4.37":
-  version "4.4.37"
-  resolved "https://registry.yarnpkg.com/@phystack/ts-schema/-/ts-schema-4.4.37.tgz#b14ee559672a61f40454b149a5be565ec28eab74"
-  integrity sha512-NJb7BpBiatS9eX1Lvz/IFF5Ib8Hi/W32tG75QOT2Hng/BzBf523PSkj6M3qFGhELywV1bAR6URuIBAYNDdxncg==
+"@phystack/ts-schema@^4.4.38":
+  version "4.4.38"
+  resolved "https://registry.yarnpkg.com/@phystack/ts-schema/-/ts-schema-4.4.38.tgz#b385cb3cd202f079dbc44d5e7a510dcc6cbcdf09"
+  integrity sha512-UmzoIxF09tHHVMfWLjxf0lHShXrxhzbEioYxPe8BrMlibqeheyjlhpxYAS4FuXtx2vNnUxAGn6s1MEDaf8W3SQ==
   dependencies:
     ts-json-schema-generator "^2.3.0"
 
