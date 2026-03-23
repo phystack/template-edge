@@ -15,7 +15,11 @@ RUN apt-get update && apt-get install -y \
 
 COPY package.json ./
 COPY yarn.lock ./
+COPY tsconfig.json ./
+COPY src ./src
+RUN yarn install
+RUN npx tsc
+RUN rm -rf src tsconfig.json node_modules
 RUN yarn install --production
-COPY dist ./
 
-CMD ["node", "app.js"]
+CMD ["node", "dist/app.js"]
