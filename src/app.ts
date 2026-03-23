@@ -7,7 +7,7 @@ const settings = await client.getSettings() as Settings;
 
 let counter = 0;
 setInterval(() => {
-  counter += + 1;
+  counter += 1;
   console.log('Hello, world!', counter);
   console.log('Settings:', JSON.stringify(settings, null, 2));
 }, 3000);
