@@ -52,10 +52,10 @@
   dependencies:
     semver "^7.3.5"
 
-"@phystack/cli@^4.4.66":
-  version "4.4.70"
-  resolved "https://registry.yarnpkg.com/@phystack/cli/-/cli-4.4.70.tgz#5ee1ac4894924c2204182c5a9419f0368e3d408d"
-  integrity sha512-l9iF9Jar63D9Tl5EcnoHJlVUNMV9apLzIQNWQyhYLmxEC3rFALP2w8W59inDEU4HsYhzJyBfrAGI7cAEincvwg==
+"@phystack/cli@^4.4.71":
+  version "4.4.71"
+  resolved "https://registry.yarnpkg.com/@phystack/cli/-/cli-4.4.71.tgz#24fddd4253d841f3c989107b754140352239c287"
+  integrity sha512-0TFfXjQO0hsLVAK21ajXA/xcXK6MvqYkuVzBGBWfNGuvJznNH1buLpwaOjHfNYj8ZlrEuzDTZgsonNgFMsReCg==
   dependencies:
     "@phystack/socket.io-proxy" "4.4.64"
     "@types/cheerio" "^0.22.35"
@@ -95,12 +95,12 @@
     websocket-stream "^5.5.2"
     ws "^7.4.5"
 
-"@phystack/hub-client@^4.4.66":
-  version "4.4.70"
-  resolved "https://registry.yarnpkg.com/@phystack/hub-client/-/hub-client-4.4.70.tgz#85374e0a93bee463970a94905aa121b6c367cd14"
-  integrity sha512-WjizYeVWoF7IwPw5aU67wPKxONMzHytJLgbMltu4aDPcOKFCWZ/s3qwWSjX30zxSCKUNjR7kIoqEVxZN6dOL6w==
+"@phystack/hub-client@^4.4.71":
+  version "4.4.71"
+  resolved "https://registry.yarnpkg.com/@phystack/hub-client/-/hub-client-4.4.71.tgz#5b76cd0f5206365a18b57171a98899060f924b7b"
+  integrity sha512-qWLTTC26ViMUm0qjiGQoCktaYkU/nxZT7fQGSo+6Vaw9bKWrEKqkykRzZa2KLs6pxZclWCItaCPHerybiWgoTQ==
   dependencies:
-    "@phystack/socket.io-proxy" "4.4.70"
+    "@phystack/socket.io-proxy" "4.4.71"
     "@roamhq/wrtc" "^0.8.0"
     axios "^1.7.9"
     bufferutil "^4.0.9"
@@ -130,10 +130,10 @@
     http-proxy-agent "^7.0.2"
     https-proxy-agent "^7.0.6"
 
-"@phystack/socket.io-proxy@4.4.70":
-  version "4.4.70"
-  resolved "https://registry.yarnpkg.com/@phystack/socket.io-proxy/-/socket.io-proxy-4.4.70.tgz#55e6a90fb1ee38f85e6fdfd73b4ce24141cc8a7d"
-  integrity sha512-kPxGWVI/K89X8BWnPR6KkdiSFnDT/myhwZEY33X1a6XordxFR5TFQxvV47k5e0ZLQ8a1VF/9KKmzC9XjPjAY5Q==
+"@phystack/socket.io-proxy@4.4.71":
+  version "4.4.71"
+  resolved "https://registry.yarnpkg.com/@phystack/socket.io-proxy/-/socket.io-proxy-4.4.71.tgz#5d4b40b593fc796b980f558b829730b9877e6b59"
+  integrity sha512-dlW4bP0cWo6EIQYx8FsulvT72G39BLoV5ojvwKoz2Urw8aCINAgBH7sm6J1uWj8S2pXXC9F5EAOBVbsuVSQciw==
   dependencies:
     axios "^1.7.9"
     bufferutil "^4.0.9"
@@ -143,10 +143,10 @@
     http-proxy-agent "^7.0.2"
     https-proxy-agent "^7.0.6"
 
-"@phystack/ts-schema@^4.4.66":
-  version "4.4.70"
-  resolved "https://registry.yarnpkg.com/@phystack/ts-schema/-/ts-schema-4.4.70.tgz#7bbe1719887588ced955382fcf9dd38765fa1d38"
-  integrity sha512-3xQeKaIKdN4v5VzOasNJsnqokMviCzTXBUyXpLL1YbBr3TIwIQdfw4uWARxjOINbEU+OBE2GmsjLwGihjAvF1Q==
+"@phystack/ts-schema@^4.4.71":
+  version "4.4.71"
+  resolved "https://registry.yarnpkg.com/@phystack/ts-schema/-/ts-schema-4.4.71.tgz#4015c99b6d9141fdca366667dbf5356a32e5b82e"
+  integrity sha512-tI4YEJ/3dFPvCxZK0Sue3J1JNxPSoLy+VLGWYrD/4aAWkXC+hTvAAo8M73m1weC+a/2q7fByVry1HI54llEKSQ==
   dependencies:
     ts-json-schema-generator "^2.3.0"
 
@@ -230,12 +230,12 @@
   dependencies:
     undici-types "~7.18.0"
 
-"@types/node@^20.19.0":
-  version "20.19.39"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.19.39.tgz#e98a3b575574070cd34b784bd173767269f95e99"
-  integrity sha512-orrrD74MBUyK8jOAD/r0+lfa1I2MO6I+vAkmAWzMYbCcgrN4lCrmK52gRFQq/JRxfYPfonkr4b0jcY7Olqdqbw==
+"@types/node@^24.6.0":
+  version "24.12.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.12.2.tgz#353cb161dbf1785ea25e8829ba7ec574c5c629ac"
+  integrity sha512-A1sre26ke7HDIuY/M23nd9gfB+nrmhtYyMINbjI1zHJxYteKR6qSMX56FsmjMcDb3SMcjJg5BiRRgOCC/yBD0g==
   dependencies:
-    undici-types "~6.21.0"
+    undici-types "~7.16.0"
 
 "@types/ws@^8.5.12":
   version "8.18.1"
@@ -2583,7 +2583,7 @@ stream-shift@^1.0.0:
   resolved "https://registry.yarnpkg.com/stream-shift/-/stream-shift-1.0.3.tgz#85b8fab4d71010fc3ba8772e8046cc49b8a3864b"
   integrity sha512-76ORR0DO1o1hlKwTbi/DM3EXWGf3ZJYO8cXX5RJwnul2DEg2oyoZyjLNoQM8WsvZiFKCRfC1O0J7iCvie3RZmQ==
 
-"string-width-cjs@npm:string-width@^4.2.0", "string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.0.0, string-width@^4.1.0, string-width@^4.2.0:
+"string-width-cjs@npm:string-width@^4.2.0":
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -2600,6 +2600,15 @@ string-width@^1.0.1:
     code-point-at "^1.0.0"
     is-fullwidth-code-point "^1.0.0"
     strip-ansi "^3.0.0"
+
+"string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.0.0, string-width@^4.1.0, string-width@^4.2.0:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
+  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
+  dependencies:
+    emoji-regex "^8.0.0"
+    is-fullwidth-code-point "^3.0.0"
+    strip-ansi "^6.0.1"
 
 string-width@^5.0.1, string-width@^5.1.2:
   version "5.1.2"
@@ -2624,7 +2633,7 @@ string_decoder@~1.1.1:
   dependencies:
     safe-buffer "~5.1.0"
 
-"strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+"strip-ansi-cjs@npm:strip-ansi@^6.0.1":
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -2637,6 +2646,13 @@ strip-ansi@^3.0.0, strip-ansi@^3.0.1:
   integrity sha512-VhumSSbBqDTP8p2ZLKj40UjBCV4+v8bUSEpUb4KjRgWk9pbqGF4REFj6KEagidb2f/M6AzC0EmFyDNGaw9OCzg==
   dependencies:
     ansi-regex "^2.0.0"
+
+strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
+  integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
+  dependencies:
+    ansi-regex "^5.0.1"
 
 strip-ansi@^7.0.1:
   version "7.2.0"
@@ -2791,12 +2807,7 @@ typed-array-buffer@^1.0.3:
     es-errors "^1.3.0"
     is-typed-array "^1.1.14"
 
-typescript@^4.9.5:
-  version "4.9.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.5.tgz#095979f9bcc0d09da324d58d03ce8f8374cbe65a"
-  integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
-
-typescript@^5.4.5, typescript@^5.9.3:
+typescript@^5.4.5, typescript@^5.9.3, typescript@~5.9.3:
   version "5.9.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.9.3.tgz#5b4f59e15310ab17a216f5d6cf53ee476ede670f"
   integrity sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==
@@ -2811,10 +2822,10 @@ underscore@^1.12.1:
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.13.8.tgz#a93a21186c049dbf0e847496dba72b7bd8c1e92b"
   integrity sha512-DXtD3ZtEQzc7M8m4cXotyHR+FAS18C64asBYY5vqZexfYryNNnDc02W4hKg3rdQuqOYas1jkseX0+nZXjTXnvQ==
 
-undici-types@~6.21.0:
-  version "6.21.0"
-  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-6.21.0.tgz#691d00af3909be93a7faa13be61b3a5b50ef12cb"
-  integrity sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==
+undici-types@~7.16.0:
+  version "7.16.0"
+  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.16.0.tgz#ffccdff36aea4884cbfce9a750a0580224f58a46"
+  integrity sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==
 
 undici-types@~7.18.0:
   version "7.18.2"
