@@ -14,13 +14,13 @@
     "extends": "react-app"
   },
   "dependencies": {
-    "@phystack/hub-client": "^4.4.66"
+    "@phystack/hub-client": "^4.4.71"
   },
   "devDependencies": {
-    "@phystack/cli": "^4.4.66",
-    "@phystack/ts-schema": "^4.4.66",
-    "@types/node": "^20.19.0",
-    "typescript": "^4.9.5"
+    "@phystack/cli": "^4.4.71",
+    "@phystack/ts-schema": "^4.4.71",
+    "@types/node": "^24.6.0",
+    "typescript": "~5.9.3"
   },
   "scripts": {
     "predev": "node scripts/init-settings.js",

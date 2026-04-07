@@ -1,10 +1,10 @@
 # template-edge
 
-Starter template for scaffolding new Node.js edge modules on the Phystack platform.
+Starter template for scaffolding new Node.js edge apps on the PhyStack platform.
 
 ## Overview
 
-This repository is a project template used by `@phystack/cli` to scaffold new edge modules. Edge modules run as Docker containers on Phystack IoT devices (barcode scanners, thermal printers, kiosks, etc.) and communicate with the platform through `@phystack/hub-client`.
+This repository is a project template used by `@phystack/cli` to scaffold new edge apps. Edge apps run on PhyStack-connected devices without a graphical user interface, executing locally as Docker containers to provide compute power and logic at the edge.
 
 This template does not deploy anywhere on its own.
 
@@ -12,71 +12,89 @@ This template does not deploy anywhere on its own.
 
 | Layer | Technology |
 |-------|------------|
-| Runtime | Node.js 20 |
-| Language | TypeScript 4.9 |
+| Runtime | Node.js 24 |
+| Language | TypeScript 5.9 |
 | Platform client | @phystack/hub-client |
 | Schema generation | @phystack/ts-schema |
-| Container | Docker (node:20-slim) |
+| Container | Docker (node:24-slim) |
 
 ## Prerequisites
 
-- Node.js 20+ (see `.nvmrc`)
+- Node.js 24+ (see `.nvmrc`)
 - Yarn 1.x
 - Docker (for container builds)
 - `@phystack/cli` installed globally (`npm i -g @phystack/cli`)
 
 ## Getting Started
 
-After scaffolding a new module with the CLI, install dependencies and start the dev build:
+This template is used automatically when you create a new edge app with the CLI:
 
 ```bash
-yarn install
-yarn devbuild
+phy app create
 ```
+
+Select **Edge Application (Node.js)** when prompted. The CLI will scaffold a new project from this template, configure your container registry and credentials, and install dependencies.
+
+### Run Locally with the Simulator
+
+Start the simulator server, then launch your app against it:
+
+```bash
+phy simulator start
+```
+
+```bash
+yarn dev
+```
+
+This creates a local simulated twin based on your settings from `src/settings/index.json` (generated from `schema.ts` defaults if the file doesn't exist), builds the Docker image, and runs the container connected to the simulator.
+
+### Build and Publish
+
+Build the `.gridapp` package:
+
+```bash
+yarn build
+```
+
+Publish to your tenant (builds the Docker image, pushes to your registry, and uploads the `.gridapp`):
+
+```bash
+yarn pub
+```
+
+For the full walkthrough, see the [Build An Edge App](https://build.phystack.com/tutorials/build-your-first-edge-app/) tutorial.
 
 ## Project Structure
 
 ```
 src/
-  app.ts           # Entry point -- connects to PhyHub, reads settings, listens for messages
-  schema.ts        # TypeScript type for console-managed settings
-Dockerfile         # Production container image
-settings.json     # Docker HostConfig defaults for the edge device
-tsconfig.json     # TypeScript compiler configuration
-meta/              # Device image and metadata for the app listing
+  app.ts              # Entry point -- connects to PhyHub, reads settings, listens for messages
+  schema.ts           # TypeScript type for console-managed settings
+scripts/
+  init-settings.js    # Generates src/settings/index.json from schema defaults
+Dockerfile            # Production container image
+settings.json         # Docker container configuration (network mode, restart policy, etc.)
+tsconfig.json         # TypeScript compiler configuration
+meta/                 # Device image and metadata for the app listing
+DESCRIPTION.md        # Marketplace description
 ```
 
-## Usage
-
-`@phystack/cli` copies this template when creating a new edge module:
-
-```bash
-phy app create --type module
-```
-
-The scaffolded project includes:
-
-- **`src/app.ts`** -- a minimal entry point that connects to PhyHub, reads settings, and listens for incoming messages.
-- **`src/schema.ts`** -- a TypeScript type exported as `Settings`. The CLI generates a JSON schema from this file so the Phystack console can render a settings form.
-- **`settings.json`** -- default Docker container configuration (network mode, restart policy, resource limits).
-
-### Build and Publish Scripts
+## Scripts
 
 | Script | Description |
 |--------|-------------|
-| `yarn devbuild` | Compile TypeScript and generate the settings schema |
-| `yarn build` | Dev build + `phy app build` to package the container |
-| `yarn pub` | Publish the built app to the Phystack registry |
-| `yarn deploy` | Deploy the app to target devices |
-
-## Template Variables
-
-| Placeholder | Replaced With |
-|-------------|---------------|
-| `{{applicationName}}` | Name provided during `phy app create` |
-| `{{author}}` | Author from CLI profile or prompt |
+| `yarn dev` | Run the app locally with the simulator (`phy simulator run .`). Automatically generates settings from schema if missing (via `predev` hook). |
+| `yarn start` | Run the compiled app directly (`node dist/app.js`) |
+| `yarn devbuild` | Compile TypeScript and generate the JSON settings schema |
+| `yarn schema` | Generate JSON schema from `src/schema.ts` |
+| `yarn build` | Dev build + `phy app build` to package the `.gridapp` |
+| `yarn pub` | Build Docker image, push to registry, and publish the `.gridapp` to your tenant |
+| `yarn deploy` | Deploy the app directly to a device in developer mode |
+| `yarn desc` | Upload the app description to your tenant |
 
 ## Related Documentation
 
-- [@phystack/hub-client](https://github.com/phystack/hub-client) -- device communication SDK
-- [@phystack/cli](https://github.com/phystack/cli) -- CLI that consumes this template
+- [Build An Edge App](https://build.phystack.com/tutorials/build-your-first-edge-app/) -- step-by-step tutorial
+- [Settings Schemas](https://build.phystack.com/phystack-concepts/settings-schemas/) -- how settings and schemas work
+- [Dev Environment Setup](https://build.phystack.com/getting-started/dev-environment-setup/) -- CLI installation and simulator setup
