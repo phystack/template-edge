@@ -1,6 +1,6 @@
 # template-edge
 
-Starter template for scaffolding new Node.js edge modules on the PhyStack platform.
+Starter template for scaffolding new Node.js edge apps on the PhyStack platform.
 
 ## Overview
 
