@@ -77,6 +77,7 @@ Dockerfile            # Production container image
 settings.json         # Docker container configuration (network mode, restart policy, etc.)
 tsconfig.json         # TypeScript compiler configuration
 meta/                 # Device image and metadata for the app listing
+DESCRIPTION.md        # Marketplace description
 ```
 
 ## Scripts
