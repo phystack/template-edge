@@ -1,7 +1,7 @@
-import { PhyHubClient, connectPhyClient } from '@phystack/hub-client';
+import { connectPhyClient } from '@phystack/hub-client';
 import { Settings } from './schema';
 
-const client: PhyHubClient = await connectPhyClient();
+const client = await connectPhyClient();
 const instance = await client.getInstance();
 const settings = await client.getSettings() as Settings;
 
