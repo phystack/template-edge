@@ -1,7 +1,7 @@
 {
-  "name": "phygrid-template-edge",
+  "name": "phystack-template-edge",
   "version": "1.1.1",
-  "description": "Phygrid Edge App Template",
+  "description": "Phystack Edge App Template",
   "application-type": "edge",
   "container-registry": "omborigridregistry.azurecr.io",
   "license": "MIT",
@@ -14,11 +14,11 @@
     "extends": "react-app"
   },
   "dependencies": {
-    "@phystack/hub-client": "^4.4.71"
+    "@phystack/hub-client": "^6.0.0"
   },
   "devDependencies": {
-    "@phystack/cli": "^4.4.71",
-    "@phystack/ts-schema": "^4.4.71",
+    "@phystack/cli": "^6.0.0",
+    "@phystack/ts-schema": "^4.4.74",
     "@types/node": "^24.6.0",
     "typescript": "~5.9.3"
   },
