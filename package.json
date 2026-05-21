@@ -1,7 +1,7 @@
 {
-  "name": "phygrid-template-edge",
+  "name": "phystack-template-edge",
   "version": "1.1.1",
-  "description": "Phygrid Edge App Template",
+  "description": "Phystack Edge App Template",
   "application-type": "edge",
   "container-registry": "omborigridregistry.azurecr.io",
   "license": "MIT",
