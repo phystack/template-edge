@@ -14,10 +14,10 @@
     "extends": "react-app"
   },
   "dependencies": {
-    "@phystack/hub-client": "^6.0.0"
+    "@phystack/hub-client": "^6.2.0"
   },
   "devDependencies": {
-    "@phystack/cli": "^6.0.0",
+    "@phystack/cli": "^6.2.0",
     "@phystack/ts-schema": "^4.4.74",
     "@types/node": "^24.6.0",
     "typescript": "~5.9.3"
