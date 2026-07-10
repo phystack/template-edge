@@ -1,100 +1,59 @@
 # template-edge
 
-Starter template for scaffolding new Node.js edge apps on the PhyStack platform.
+Starter template for PhyStack **EDGE** apps — containerized apps running on
+PhyOS devices. Scaffolded by the PhyStack CLI (`phy app init --type edge`)
+or usable directly.
 
-## Overview
-
-This repository is a project template used by `@phystack/cli` to scaffold new edge apps. Edge apps run on PhyStack-connected devices without a graphical user interface, executing locally as Docker containers to provide compute power and logic at the edge.
-
-This template does not deploy anywhere on its own.
-
-## Tech Stack
-
-| Layer | Technology |
-|-------|------------|
-| Runtime | Node.js 24 |
-| Language | TypeScript 5.9 |
-| Platform client | @phystack/hub-client |
-| Schema generation | @phystack/ts-schema |
-| Container | Docker (node:24-slim) |
-
-## Prerequisites
-
-- Node.js 24+ (see `.nvmrc`)
-- Yarn 1.x
-- Docker (for container builds)
-- `@phystack/cli` installed globally (`npm i -g @phystack/cli`)
-
-## Getting Started
-
-This template is used automatically when you create a new edge app with the CLI:
+## Getting started
 
 ```bash
-phy app create
+# Scaffold via the PhyStack CLI
+phy app init my-edge-app --type edge
+
+# Or work directly from this template
+bun install
+bun run build
 ```
 
-Select **Edge Application (Node.js)** when prompted. The CLI will scaffold a new project from this template, configure your container registry and credentials, and install dependencies.
-
-### Run Locally with the Simulator
-
-Start the simulator server, then launch your app against it:
+## Local development (simulator)
 
 ```bash
-phy simulator start
+npm i -g @phystack/device-simulator   # once
+phy-simulator start                   # terminal 1: local device on :55000
+bun run dev                           # terminal 2: run the app inside it
 ```
+
+Settings for local runs are generated into `src/settings/index.json` from the
+schema defaults (`bun run dev` does this automatically; delete the file to
+regenerate).
+
+## Flow
 
 ```bash
-yarn dev
+# 1. Edit src/schema.ts (installation settings) and src/app.ts (device logic)
+# 2. Local build: typecheck + compile the settings schema to build/
+bun run build
+
+# 3. Register the app in your tenant (once)
+phy app create my-edge-app --type edge
+
+# 4. Log in to your container registry (once)
+phy registry login docker.io
+
+# 5. Build + push the image, submit and publish the build
+bun run pub
 ```
 
-This creates a local simulated twin based on your settings from `src/settings/index.json` (generated from `schema.ts` defaults if the file doesn't exist), builds the Docker image, and runs the container connected to the simulator.
+`pub` runs `phy app build create $npm_package_name --dir . --push --publish` —
+the image ref is derived from your registry login, the pull credential is
+attached automatically, and the build is published as soon as it processes.
 
-### Build and Publish
+## Layout
 
-Build the `.gridapp` package:
-
-```bash
-yarn build
-```
-
-Publish to your tenant (builds the Docker image, pushes to your registry, and uploads the `.gridapp`):
-
-```bash
-yarn pub
-```
-
-For the full walkthrough, see the [Build An Edge App](https://build.phystack.com/tutorials/build-your-first-edge-app/) tutorial.
-
-## Project Structure
-
-```
-src/
-  app.ts              # Entry point -- connects to PhyHub, reads settings, listens for messages
-  schema.ts           # TypeScript type for console-managed settings
-scripts/
-  init-settings.js    # Generates src/settings/index.json from schema defaults
-Dockerfile            # Production container image
-settings.json         # Docker container configuration (network mode, restart policy, etc.)
-tsconfig.json         # TypeScript compiler configuration
-meta/                 # Device image and metadata for the app listing
-DESCRIPTION.md        # Marketplace description
-```
-
-## Scripts
-
-| Script | Description |
-|--------|-------------|
-| `yarn dev` | Run the app locally with the simulator (`phy simulator run .`). Automatically generates settings from schema if missing (via `predev` hook). |
-| `yarn start` | Run the compiled app directly (`node dist/app.js`) |
-| `yarn devbuild` | Compile TypeScript and generate the JSON settings schema |
-| `yarn schema` | Generate JSON schema from `src/schema.ts` |
-| `yarn build` | Dev build + `phy app build` to package the `.gridapp` |
-| `yarn pub` | Build Docker image, push to registry, and publish the `.gridapp` to your tenant |
-| `yarn deploy` | Deploy the app directly to a device in developer mode |
-| `yarn desc` | Upload the app description to your tenant |
-
-## Related Documentation
-
-- [Build An Edge App](https://build.phystack.com/tutorials/build-your-first-edge-app/) -- step-by-step tutorial
-- [Settings Schemas](https://build.phystack.com/phystack-concepts/settings-schemas/) -- how settings and schemas work
-- [Dev Environment Setup](https://build.phystack.com/getting-started/dev-environment-setup/) -- CLI installation and simulator setup
+| Path | Purpose |
+|------|---------|
+| `src/app.ts` | App entrypoint (hub-client connection, settings, twin messaging) |
+| `src/schema.ts` | Installation-settings schema (TypeScript → JSON Schema) |
+| `settings.json` | Docker `createOptions` attached to the build |
+| `Dockerfile` | Bun runtime image running the TypeScript source directly |
+| `scripts/init-settings.js` | Generates local dev settings from schema defaults |

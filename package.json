@@ -1,37 +1,29 @@
 {
   "name": "phystack-template-edge",
-  "version": "1.1.1",
+  "version": "1.0.0",
   "description": "PhyStack Edge App Template",
   "application-type": "edge",
-  "container-registry": "omborigridregistry.azurecr.io",
   "license": "MIT",
   "type": "module",
   "private": true,
   "engines": {
     "node": ">=24.0.0"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "dependencies": {
-    "@phystack/hub-client": "^6.2.0"
+    "@phystack/hub-client": "^6.3.5"
   },
   "devDependencies": {
-    "@phystack/cli": "^6.2.0",
     "@phystack/ts-schema": "^4.4.74",
     "@types/node": "^24.6.0",
     "typescript": "~5.9.3"
   },
   "scripts": {
-    "predev": "node scripts/init-settings.js",
-    "dev": "phy simulator run .",
-    "start": "node dist/app.js",
-    "devbuild": "mkdir -p build && tsc && yarn schema && touch build/index.html",
-    "bootstrap": "echo init ok",
-    "schema": "mkdir -p build && npx ts-schema src/schema.ts build/",
-    "build": "yarn devbuild && phy app build",
-    "desc": "phy app upload-description",
-    "pub": "phy app publish",
-    "deploy": "phy app deploy"
+    "predev": "bun scripts/init-settings.js",
+    "dev": "phy-simulator run . --dev-command 'bun src/app.ts'",
+    "start": "bun src/app.ts",
+    "schema": "mkdir -p build && bunx ts-schema src/schema.ts build/",
+    "build": "tsc && bun run schema",
+    "typecheck": "tsc --noEmit",
+    "pub": "bun run build && phy app build create $npm_package_name --dir . --push --publish"
   }
 }
