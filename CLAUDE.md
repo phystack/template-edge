@@ -9,7 +9,7 @@ Edge twin). Scaffolded by `phy app init <name> --type edge`.
 | Command | What it runs |
 |---|---|
 | `bun install` | Install dependencies |
-| `bun run dev` | `phy-simulator run . --dev-command 'bun src/app.ts'` — local simulated device + the app inside it |
+| `bun run dev` | `phy-simulator run . --dev-command 'bun src/app.ts'` — twin on the running simulator + the app connected to it |
 | `bun run start` | `bun src/app.ts` — run the app directly |
 | `bun run build` | `tsc` typecheck + compile `src/schema.ts` to `build/schema.json` + `build/meta-schema.json` |
 | `bun run typecheck` | `tsc --noEmit` |
@@ -17,9 +17,11 @@ Edge twin). Scaffolded by `phy app init <name> --type edge`.
 
 ## Dev loop
 
-- `bun run dev` needs the standalone simulator installed once:
-  `npm i -g @phystack/device-simulator` (provides the `phy-simulator` binary).
-  It boots a simulated device on `:55000` and runs the app against it.
+- Install the standalone simulator once (`npm i -g @phystack/device-simulator`,
+  provides the `phy-simulator` binary) and start it in a separate terminal:
+  `phy-simulator start` (simulated device on `:55000`). Then `bun run dev`
+  creates a twin on it and runs the app connected to it — `run` requires the
+  server to already be running.
 - The `predev` hook generates `src/settings/index.json` from the schema
   defaults — a local-dev bootstrap only; delete it to regenerate after
   schema changes. In production, settings arrive on the Edge twin's desired
