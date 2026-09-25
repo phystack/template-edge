@@ -10,7 +10,7 @@
     "node": ">=24.0.0"
   },
   "dependencies": {
-    "@phystack/hub-client": "^6.3.5"
+    "@phystack/hub-client": "^6.19.0"
   },
   "devDependencies": {
     "@phystack/ts-schema": "^4.4.74",
